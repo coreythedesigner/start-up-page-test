@@ -1,0 +1,101 @@
+@import 'compass/css3';
+
+html, body {
+  background: #0f222b;
+  background: linear-gradient(to left, #0f222b , #0a181e);
+}
+
+.starticon {
+    background: url("http://splash.soundstr.com/hubfs/Soundstr%20Logos%20(SVG)/startup-icon.svg");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index:1000;
+    animation: pulse 5s infinite;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.logo {
+    background: url("http://splash.soundstr.com/hubfs/Soundstr%20Logos%20(SVG)/Soundstr_Logos_Wide.svg") no-repeat 50%/70%;
+    width: 200px;
+    height: 110px;
+    position: absolute;
+    animation: fadeIn;
+    animation-duration: 3s;
+    top:1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes delayfade {
+    0%   {opacity: 0}
+    50%   {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.3, 1.3, 1.3);
+    transform: scale3d(1.3, 1.3, 1.3);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+.container {
+  position: relative;
+  width: 99.5vw;
+  height: 99.5vh;
+  
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 4px solid #00c6ff;
+    @include border-radius(50%);
+        
+    $count: 8;
+    @for $i from 1 through $count {
+      &:nth-child(#{$i}) {
+        @include animation(grow 3s #{(.5*$i)}s infinite ease-out);
+      }
+    }
+  }
+}
+
+@include keyframes(grow) {
+  0%   {opacity: 0}
+  25%  {opacity: 1}
+  100% {
+    padding: 150px;
+    border-color: #9733ee;
+    margin: -150px 0 0 -150px;
+    opacity: 0;
+  }
+}
