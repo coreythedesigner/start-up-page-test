@@ -1,19 +1,37 @@
 <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
 
-<html>  
-<head>
-<link rel="stylesheet" href="main.css">
-</head>
+        <title>Tweet to Download | Tutorialzine Demo</title>
 
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
 
-<div class="starticon"></div>
-<div class="logo"></div>
-<div class="container">
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-</div>
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Tweet to Download</h1>
+            <h2><a href="http://tutorialzine.com/2011/05/tweet-to-download-jquery/">&laquo; Back to Tutorialzine</a></h2>
+        </header>
+
+        <section id="container">
+        	<p>The button below is activated<br />only* after you tweet. <a href="#" id="tweetLink">Try it.</a></p>
+            <a href="#" class="downloadButton">Download</a>
+        </section>
+
+        <footer>*Not exactly. Read more in the tutorial..</footer>
+
+        <img src="assets/img/twitter_bird.png" alt="Twitter Bird" />
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <script src="assets/js/jquery.tweetAction.js"></script>
+        <script src="assets/js/script.js"></script>
+
+    </body>
+</html>
